@@ -25,7 +25,7 @@ from argparse import ArgumentParser
 import subprocess
 import logging
 
-from twilio.rest import TwilioRestClient
+from twilio.rest import Client
 from twilio.exceptions import TwilioException
 
 from clicktocall import local_settings
@@ -59,7 +59,7 @@ class Configure(object):
                                      "local_settings.")
 
         logging.debug("Creating Twilio client...")
-        self.client = TwilioRestClient(self.account_sid, self.auth_token)
+        self.client = Client(self.account_sid, self.auth_token)
 
         logging.debug("Checking if host is set.")
         if not self.host:
