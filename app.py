@@ -1,6 +1,6 @@
 import os
 
-from clicktocall.app import app
+from clicktocall import app
 
 
 if __name__ == '__main__':

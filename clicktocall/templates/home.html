@@ -5,23 +5,26 @@
         <h2>IDAYIT Twillio Call</h2>
         <p>This is test page to test Twillio calls</p>
     </div>
-    <form id="contactForm" role="form">
+    <form id="contactForm" role="form" method="post">
         <div class="form-group">
-            <h3>Call Sales</h3>
-            <p class="help-block">
-                Are you interested in impressing your friends and
-                confounding your enemies? Enter your phone number
-                below, and our team will contact you right away.
-            </p>
+            <h3>Call message</h3>
+            <textarea name="message" cols="40" rows="5">{{ message }}</textarea>
         </div>
         <div class="form-group">
             <select name="phoneNumber">
+                <option value="+41788850640">+41788850640</option>
                 <option value="+41323436151">+41323436151</option>
             </select>
-            <button type="submit" class="btn btn-default" href="{{ url_for('call') }}">
-                Contact Sales
+            <button type="submit" class="btn btn-default" formaction="{{ url_for('main.call') }}">
+                Call now
             </button>
-    
+
         </div>
     </form>
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor %}
 {% endblock %}

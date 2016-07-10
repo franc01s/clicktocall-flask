@@ -15,3 +15,6 @@ venv
 *.coverage
 flask_clicktocall.egg-info
 .idea/
+clicktocall/__pycache__/
+clicktocall/main/__pycache__/
+
