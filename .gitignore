@@ -14,3 +14,4 @@ venv
 *.swp
 *.coverage
 flask_clicktocall.egg-info
+.idea/

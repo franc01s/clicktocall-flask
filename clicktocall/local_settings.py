@@ -2,16 +2,9 @@
 Configuration Settings
 '''
 
-''' Uncomment to configure using the file.  
-WARNING: Be careful not to post your account credentials on GitHub.
+TWILIO_ACCOUNT_SID = "AC8d12d4d5c78781d3a18c4419468e6882"
+TWILIO_AUTH_TOKEN = "a8ed7fad184108219cc517205b2da8ef"
+TWILIO_CALLER_ID = "+41215880550"
 
-TWILIO_ACCOUNT_SID = "ACxxxxxxxxxxxxx" 
-TWILIO_AUTH_TOKEN = "yyyyyyyyyyyyyyyy"
-TWILIO_CALLER_ID = "+17778889999"
-'''
 
-import os
-TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID', None)
-TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN', None)
-TWILIO_CALLER_ID = os.environ.get('TWILIO_CALLER_ID', None)
-TWILIO_APP_SID = os.environ.get('TWILIO_APP_SID', None)
+
